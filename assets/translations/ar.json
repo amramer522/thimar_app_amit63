@@ -1,0 +1,20 @@
+{
+ "welcomeTo": "مرحبا بك مرة أخرى",
+ "youCanLoginNow": "يمكنك تسجيل الدخول الأن",
+ "youCanRegisterNow": "يمكنك تسجيل حساب جديد الأن",
+ "phoneNumber": "رقم الجوال",
+ "password": "كلمة المرور",
+ "city": "المدينة",
+ "confirmPassword": "تأكيد كلمة المرور",
+ "userName": "اسم المستخدم",
+ "forgetPassword": "نسيت كلمة المرور ؟",
+ "login": "تسجيل الدخول",
+ "dontHaveAccount": "ليس لديك حساب ؟",
+ "haveAccount": "لديك حساب بالفعل ؟",
+ "registerNow": "تسجيل الأن",
+ "register": "تسجيل",
+ "passwordMustBeNotEmpty": "يجب كتابة كلمة المرور",
+ "weakPassword": "كلمة مرور ضعيفة",
+ "phoneMustBeNotEmpty": "يجب كتابة رقم الجوال",
+ "invalidPhoneNumber": "رقم الجوال غير صحيح"
+}

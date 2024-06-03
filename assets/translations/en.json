@@ -1,0 +1,14 @@
+{
+  "welcomeTo": "مرحبا بك مرة أخرى",
+  "youCanLoginNow": "يمكنك تسجيل الدخول الأن",
+  "phoneNumber": "رقم الجوال",
+  "password": "كلمة المرور",
+  "forgetPassword": "نسيت كلمة المرور ؟",
+  "login": "تسجيل الدخول",
+  "dontHaveAccount": "ليس لديك حساب ؟",
+  "register": "تسجيل الأن",
+  "passwordMustBeNotEmpty": "Password Must be Not Empty",
+  "weakPassword": "Weak Password",
+  "phoneMustBeNotEmpty": "Phone Must be Not Empty",
+  "invalidPhoneNumber": "Invalid Phone Number"
+}
