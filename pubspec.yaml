@@ -27,6 +27,7 @@ dependencies:
   pin_code_fields: ^8.0.1
   url_launcher: ^6.2.6
   flutter_svg: ^2.0.10+1
+  animated_notch_bottom_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:

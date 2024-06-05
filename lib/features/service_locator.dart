@@ -5,9 +5,11 @@ import 'package:app/features/products/bloc.dart';
 import 'package:app/features/sliders/bloc.dart';
 import 'package:get_it/get_it.dart';
 
+import 'add_to_cart/bloc.dart';
 import 'app_info/bloc.dart';
 import 'cart/bloc.dart';
 import 'contact_us/bloc.dart';
+import 'otp/bloc.dart';
 import 'register/bloc.dart';
 import 'update_cart_item/bloc.dart';
 
@@ -17,7 +19,9 @@ void initServiceLocator() {
 
   container.registerSingleton(DioHelper());
   container.registerFactory(() => LoginBloc(GetIt.instance<DioHelper>()));
+  container.registerFactory(() => AddToCartBloc(GetIt.instance<DioHelper>()));
   container.registerFactory(() => RegisterBloc(GetIt.instance<DioHelper>()));
+  container.registerFactory(() => OTPBloc(GetIt.instance<DioHelper>()));
   container.registerFactory(() => ContactUsBloc(GetIt.instance<DioHelper>()));
   container.registerFactory(() => UpdateCartItemBloc(GetIt.instance<DioHelper>()));
   container.registerFactory(() => AppInfoBloc(GetIt.instance<DioHelper>())..add(GetAppInfoEvent()));

@@ -79,8 +79,8 @@ class ProductModel {
   ProductModel.fromJson(Map<String, dynamic> json) {
     id = json['id']??0;
     title = json['title']??"";
-    image = "https://news.radioalgerie.dz/sites/default/data/2023-11/11841.jpg";
-    // image = json['image']??"";
+    // image = "https://news.radioalgerie.dz/sites/default/data/2023-11/11841.jpg";
+    image = json['image']??"";
     amount = json['amount']??0;
     priceBeforeDiscount = json['price_before_discount']??0;
     discount = json['discount']??0;

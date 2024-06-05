@@ -7,7 +7,9 @@ import 'core/logic/cache_helper.dart';
 import 'core/logic/helper_methods.dart';
 import 'features/service_locator.dart';
 import 'views/auth/login.dart';
+import 'views/auth/otp.dart';
 import 'views/auth/register.dart';
+import 'views/home/view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      child: const LoginView(),
+      child: HomeView(),
       builder: (context, child) => MaterialApp(
         title: 'Thimar',
         theme: AppTheme.light,
