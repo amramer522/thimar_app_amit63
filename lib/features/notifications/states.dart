@@ -6,10 +6,13 @@ class GetNotificationsLoadingState extends GetNotificationsStates {}
 
 class GetNotificationsFailedState extends GetNotificationsStates {
   final String msg;
-  final int? statusCode;
 
 
-  GetNotificationsFailedState({required this.msg, this.statusCode});
+  GetNotificationsFailedState({required this.msg});
 }
 
-class GetNotificationsSuccessState extends NotificationsStates {}
+class GetNotificationsSuccessState extends GetNotificationsStates {
+  final List<NotificationModel> list;
+
+  GetNotificationsSuccessState({required this.list});
+}

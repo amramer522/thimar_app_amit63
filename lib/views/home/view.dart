@@ -17,7 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final _pageController = PageController(initialPage: 2);
+  final _pageController = PageController(initialPage: 1);
   final icons = [
     "my_orders.svg",
     "notifications.svg",
@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
     "my_account.svg"
   ];
   final titles = ["طلباتي", "الإشعارات", "الرئيسية", "المفضلة", "حسابي"];
-  int currentPage = 2;
+  int currentPage = 1;
 
   @override
   Widget build(BuildContext context) {

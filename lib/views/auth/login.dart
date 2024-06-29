@@ -9,7 +9,9 @@ import 'package:get_it/get_it.dart';
 import '../../core/design/app_button.dart';
 import '../../core/design/app_image.dart';
 import '../../core/design/app_input.dart';
+import '../../core/logic/helper_methods.dart';
 import '../../core/logic/input_validator.dart';
+import '../home/view.dart';
 import 'components/have_account_or_not.dart';
 
 class LoginView extends StatefulWidget {
@@ -83,8 +85,14 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                BlocBuilder(
+                BlocConsumer(
                   bloc: bloc,
+                  listener: (context, state) {
+                    if(state is LoginSuccessState)
+                      {
+                        navigateTo(HomeView(),keepHistory: false);
+                      }
+                  },
                   builder: (context,state) =>AppButton(
                     isLoading: state is LoginLoadingState,
                     onPressed: () {
@@ -100,5 +108,11 @@ class _LoginViewState extends State<LoginView> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    bloc.close();
   }
 }

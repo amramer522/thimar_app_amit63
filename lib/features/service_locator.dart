@@ -9,6 +9,10 @@ import 'add_to_cart/bloc.dart';
 import 'app_info/bloc.dart';
 import 'cart/bloc.dart';
 import 'contact_us/bloc.dart';
+import 'convert_text_to_image/bloc.dart';
+import 'get_profile/bloc.dart';
+import 'get_profile_images/bloc.dart';
+import 'notifications/bloc.dart';
 import 'otp/bloc.dart';
 import 'register/bloc.dart';
 import 'update_cart_item/bloc.dart';
@@ -29,4 +33,8 @@ void initServiceLocator() {
   container.registerFactory(() => SliderBloc(GetIt.instance<DioHelper>())..add(GetSliderEvent()));
   container.registerFactory(() => ProductsBloc(GetIt.instance<DioHelper>())..add(GetProductsEvent()));
   container.registerFactory(() => CartBloc(GetIt.instance<DioHelper>())..add(GetCartEvent()));
+  container.registerFactory(() => GetNotificationsBloc(GetIt.instance<DioHelper>())..add(GetNotificationsEvent()));
+  container.registerFactory(() => GetProfileBloc(GetIt.instance<DioHelper>())..add(GetProfileEvent()));
+  container.registerFactory(() => GetProfileImagesBloc(GetIt.instance<DioHelper>())..add(GetProfileImagesEvent()));
+  container.registerFactory(() => ConvertTextToImageBloc(GetIt.instance<DioHelper>()));
 }

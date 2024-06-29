@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:app/core/logic/helper_methods.dart';
+import 'package:app/views/home/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,7 +34,7 @@ class LoginBloc extends Bloc<LoginEvents, LoginStates> {
         "user_type": "client"
       });
       if (response.isSuccess) {
-        // navigateTo(ProductsView());
+
         emit(LoginSuccessState());
       } else {
         showMessage(response.message!);

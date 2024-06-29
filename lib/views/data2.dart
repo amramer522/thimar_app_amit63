@@ -1,12 +1,14 @@
 import 'dart:convert';
 
 import 'package:app/core/design/app_image.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import '../core/design/app_failed.dart';
 import '../core/design/app_loading.dart';
+import '../core/logic/firebase_helper.dart';
 import '../features/get_profile/bloc.dart';
 import '../features/get_profile_images/bloc.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -22,8 +24,20 @@ class _Data2ViewState extends State<Data2View> {
   final ref = FirebaseDatabase.instance.ref();
 
   @override
+  void initState() {
+    super.initState();
+    FirebaseHelper().getFCMToken();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // show notification
+         FirebaseHelper().notifyNow("amoor","1111111");
+        },
+      ),
       body: StreamBuilder(
         builder: (context, snapshot) {
           if (snapshot.hasData) {

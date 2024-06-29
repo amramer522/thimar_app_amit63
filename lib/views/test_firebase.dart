@@ -161,9 +161,9 @@ class _TestFirebaseViewState extends State<TestFirebaseView> {
     isLoading = true;
     setState(() {});
     try {
-      final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
+      final userCredential = await FirebaseAuth.instance.signInWithProvider(
+        PhoneAuthProvider()
+
       );
 
       showMessage("Hello ${userCredential.user?.displayName}",
