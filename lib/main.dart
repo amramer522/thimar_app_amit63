@@ -1,6 +1,7 @@
 import 'package:app/core/app_theme.dart';
 import 'package:app/core/logic/bloc_ovserver.dart';
 import 'package:app/core/logic/firebase_helper.dart';
+import 'package:app/core/logic/my_fatwora_helper.dart';
 import 'package:app/views/test_firebase.dart';
 import 'package:app/views/test_responsive/view.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -16,6 +17,8 @@ import 'features/service_locator.dart';
 import 'firebase_options.dart';
 import 'views/chat/view.dart';
 import 'views/data2.dart';
+import 'views/pay/view.dart';
+import 'views/pay2.dart';
 import 'views/search.dart';
 import 'views/text_to_image.dart';
 
@@ -25,6 +28,7 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   initServiceLocator();
   Bloc.observer = AppBlocObserver();
+  // await MyFatworaHelper.init();
 // await FirebaseHelper().init();
   runApp(
     EasyLocalization(
@@ -55,7 +59,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      child: ChatView(),
+      child: Pay2View(),
       builder: (context, child) => MaterialApp(
         title: 'Thimar',
         theme: AppTheme.light,
