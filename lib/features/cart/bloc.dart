@@ -24,6 +24,7 @@ class CartBloc extends Bloc<CartEvents, CartStates> {
       final model = CartData.fromJson(response.data);
       emit(GetCartSuccessState(model: model));
     } else {
+      //
       emit(GetCartFailedState(msg: response.message!));
     }
   }
