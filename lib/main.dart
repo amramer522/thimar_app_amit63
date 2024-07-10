@@ -24,6 +24,7 @@ import 'views/pay/view.dart';
 import 'views/pay2.dart';
 import 'views/products/view.dart';
 import 'views/search.dart';
+import 'views/streams_exampe.dart';
 import 'views/text_to_image.dart';
 
 void main() async {
@@ -33,8 +34,8 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   initServiceLocator();
   Bloc.observer = AppBlocObserver();
-  // await MyFatworaHelper.init();
-// await FirebaseHelper().init();
+    // await MyFatworaHelper.init();
+   // await FirebaseHelper().init();
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -63,7 +64,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      child: ProductsView(),
+      child:StreamsExampleView(),
       builder: (context, child) => MaterialApp(
         title: 'Thimar',
         theme: AppTheme.light,

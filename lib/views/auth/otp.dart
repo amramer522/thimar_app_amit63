@@ -40,6 +40,7 @@ class _OTPViewState extends State<OTPView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+
                 AppImage(
                   "logo.png",
                   width: 130.w,

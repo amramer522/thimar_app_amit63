@@ -8,4 +8,7 @@ git push -u origin main
 
 git commit -am "message"
 
+//keytool -genkey -v -keystore %userprofile%\key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key
+
+
  */
